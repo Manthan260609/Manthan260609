@@ -1,0 +1,66 @@
+import java.util.*;
+public class TwinPrime
+{
+    public static int  twinprime(int m,int n)
+    {
+        boolean result1=true;
+        for(int i=2;i<m;i++)
+        {
+            if(m%i==0)
+            {
+                result1=false;
+                break;
+            }
+        }
+        if (result1)
+            {
+                System.out.println("It is a Prime Number");
+            }
+            else
+            {
+                System.out.println("It is not a Prime Number");
+            }
+        boolean result2=true;
+        for(int i=2;i<n;i++)
+        {
+            if(n%i==0)
+            {
+                result2=false;
+                break;
+            }
+        }
+        if (result2)
+            {
+                System.out.println("It is a Prime Number");
+            }
+            else
+            {
+                System.out.println("It is not a Prime Number");
+            }
+        int result3=n-m;
+        if (result3==2)
+        {
+            System.out.println("It is a TwinPrime Number");
+        }
+        else
+        {
+            System.out.println("It is a not TwinPrime Number");
+        }
+        return result3 ;
+    }
+    public static void main()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 1st Number");
+        int a=sc.nextInt();
+       
+        System.out.println("Enter 2nd Number");
+        int b=sc.nextInt();
+       
+        TwinPrime s=new TwinPrime();
+        TwinPrime.twinprime(a,b);
+    }
+}
+
+
+
